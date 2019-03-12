@@ -1,15 +1,13 @@
 package fromCSV;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class WriteOut implements GlobalVariables {
+public class WriteOut {
 
-	public void writeOut() {
+	public void writeOut(ArrayList<ArrayList<String>> SHEET) {
 		for (ArrayList<String> sorok : SHEET) {
 			for (String cella : sorok) {
 				System.out.print(cella + " ");
@@ -19,7 +17,7 @@ public class WriteOut implements GlobalVariables {
 
 	}
 
-	public void writeToFile() throws IOException {
+	public void writeToFile(ArrayList<ArrayList<String>> SHEET) throws IOException {
 		File file2 = new File("Oribatida.csv");
 		FileWriter fileOut = new FileWriter (file2);
 		

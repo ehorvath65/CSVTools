@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class FromCSV implements GlobalVariables {
+public class FromCSV {
 	
 	
 
-	public void fromCSV() throws IOException {
+	public void fromCSV(ArrayList<ArrayList<String>> SHEET) throws IOException {
 		// TODO Auto-generated method stub
 		File file = new File("Oribatid.csv");
 		FileReader fileReader = new FileReader(file);
@@ -27,16 +27,4 @@ public class FromCSV implements GlobalVariables {
 		}
 		bufferedReader.close();
 	}
-		
-//		public void writeOut() {
-//		for (ArrayList<String> sorok : SHEET) {
-//			for (String cella : sorok) {
-//				System.out.print(cella + " ");
-//			}
-//			System.out.println();
-//		}
-//		
-//	}
-	
-
 }
