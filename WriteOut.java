@@ -14,26 +14,18 @@ public class WriteOut {
 			}
 			System.out.println();
 		}
-
 	}
 
 	public void writeToFile(ArrayList<ArrayList<String>> SHEET) throws IOException {
 		File file2 = new File("Oribatida.csv");
 		FileWriter fileOut = new FileWriter (file2);
 		
+		String joined;
 		for (ArrayList<String> row : SHEET) {
-			String sor = "";
-			for (int i = 0; i < row.size(); i++) {
-				sor += row.get(i);
-				if (i < row.size() - 1) {
-					sor += ";";
-				}
-				
-			}
-			fileOut.write(sor + "\n");
+			
+			joined = String.join(";", row);
+			fileOut.write(joined + "\n");
 		}
 		fileOut.close();
-		
 	}
-
 }
