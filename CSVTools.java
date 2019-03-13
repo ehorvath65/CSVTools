@@ -19,9 +19,6 @@ public class CSVTools {
 //		olvas.fromCSV(SHEET);
 		new FromCSV().fromCSV(SHEET);
 		new Convert().convert(SHEET);
-		WriteOut kiir = new WriteOut();
-		kiir.writeOut(SHEET);
-		kiir.writeToFile(SHEET);
-		//new WriteOut().writeToFile(SHEET);
+		new WriteOut().writeToFile(SHEET);
 	}
 }
